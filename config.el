@@ -43,7 +43,7 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/org/")
+(setq org-directory "~/Sync/Notes/org/")
 
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
@@ -79,3 +79,9 @@
 ;; they are implemented.
 
 (rainbow-delimiters-mode -1)
+(setq-default global-whitespace-mode t)
+(setq whitespace-style '(face spaces space-mark tabs tab-mark newline newline-mark trailing))
+(use-package! lsp-bridge
+  :config
+  (setq lsp-bridge-enable-log nil)
+  (global-lsp-bridge-mode))
